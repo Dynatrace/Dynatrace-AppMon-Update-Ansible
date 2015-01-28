@@ -13,7 +13,7 @@ The role is available via:
 
 ## Requirements
 
-Place a fixpack ```dynatrace.dtf``` in the role's ```files``` directory from where it will be picked up during the automated installation.
+Place a fixpack as ```dynatrace-fixpack.dtf``` in the role's ```files``` directory from where it will be picked up during the automated installation.
 
 ## Role Variables
 
