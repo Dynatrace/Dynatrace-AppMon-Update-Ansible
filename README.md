@@ -31,7 +31,7 @@ As defined in ```defaults/main.yml```:
 
 	- hosts: all
 	  roles:
-	    - { role: dynatrace.Dynatrace-Fixpack }
+	    - role: dynatrace.Dynatrace-Fixpack
 
 ## Additional Resources
 
