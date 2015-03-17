@@ -19,19 +19,19 @@ Place a fixpack as ```dynatrace-fixpack.dtf``` in the role's ```files``` directo
 
 As defined in ```defaults/main.yml```:
 
-| Name                                            | Default               | Description |
-|-------------------------------------------------|-----------------------|-------------|
-| *dynatrace_fixpack_linux_dynatrace_install_dir* | /opt/dynatrace        | The directory that contains an installation of the Dynatrace Server. |
-| *dynatrace_fixpack_file_name*                   | dynatrace-fixpack.dtf | The file name of the Dynatrace Fixpack in the role's ```files``` directory. |
-| *dynatrace_fixpack_user_name*                   | admin                 | The username of a Dynatrace user that has the *Manage Fixpacks* permission. |
-| *dynatrace_fixpack_user_password*               | admin                 | The password of a Dynatrace user that has the *Manage Fixpacks* permission. |
-| *dynatrace_fixpack_role_name*                   | Dynatrace-Fixpack     | The actual name of this role in an [Ansible Playbook's](http://docs.ansible.com/playbooks.html) ```roles``` directory. |
+| Name                                            | Default                     | Description |
+|-------------------------------------------------|-----------------------------|-------------|
+| *dynatrace_fixpack_linux_dynatrace_install_dir* | /opt/dynatrace              | The directory that contains an installation of the Dynatrace Server. |
+| *dynatrace_fixpack_file_name*                   | dynatrace-fixpack.dtf       | The file name of the Dynatrace Fixpack in the role's ```files``` directory. |
+| *dynatrace_fixpack_user_name*                   | admin                       | The username of a Dynatrace user that has the *Manage Fixpacks* permission. |
+| *dynatrace_fixpack_user_password*               | admin                       | The password of a Dynatrace user that has the *Manage Fixpacks* permission. |
+| *dynatrace_fixpack_role_name*                   | dynatrace.Dynatrace-Fixpack | The actual name of this role in an [Ansible Playbook's](http://docs.ansible.com/playbooks.html) ```roles``` directory. |
 
 ## Example Playbook
 
 	- hosts: all
 	  roles:
-	    - { role: Dynatrace-Fixpack }
+	    - { role: dynatrace.Dynatrace-Fixpack }
 
 ## Additional Resources
 

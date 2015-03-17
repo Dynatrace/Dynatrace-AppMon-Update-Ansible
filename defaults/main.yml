@@ -5,4 +5,4 @@ dynatrace_fixpack_file_name: dynatrace-fixpack.dtf
 dynatrace_fixpack_user_name: admin
 dynatrace_fixpack_user_password: admin
 
-dynatrace_fixpack_role_name: Dynatrace-Fixpack
+dynatrace_fixpack_role_name: dynatrace.Dynatrace-Fixpack
