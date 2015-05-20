@@ -19,13 +19,13 @@ Place a fixpack as ```dynatrace-fixpack.dtf``` in the role's ```files``` directo
 
 As defined in ```defaults/main.yml```:
 
-| Name                                            | Default                     | Description |
-|-------------------------------------------------|-----------------------------|-------------|
-| *dynatrace_fixpack_linux_dynatrace_install_dir* | /opt/dynatrace              | The directory that contains an installation of the Dynatrace Server. |
-| *dynatrace_fixpack_file_name*                   | dynatrace-fixpack.dtf       | The file name of the Dynatrace Fixpack in the role's ```files``` directory. |
-| *dynatrace_fixpack_user_name*                   | admin                       | The username of a Dynatrace user that has the *Manage Fixpacks* permission. |
-| *dynatrace_fixpack_user_password*               | admin                       | The password of a Dynatrace user that has the *Manage Fixpacks* permission. |
-| *dynatrace_fixpack_role_name*                   | dynatrace.Dynatrace-Fixpack | The actual name of this role in an [Ansible Playbook's](http://docs.ansible.com/playbooks.html) ```roles``` directory. |
+| Name                                            | Default                                          | Description |
+|-------------------------------------------------|--------------------------------------------------|-------------|
+| *dynatrace_fixpack_file_name*                   | dynatrace-fixpack.dtf                            | The file name of the Dynatrace Fixpack in the role's ```files``` directory. |
+| *dynatrace_fixpack_file_url*                    | http://localhost/dynatrace/dynatrace-fixpack.dtf | A HTTP, HTTPS or FTP URL to the Dynatrace Fixpack in the form (http\|https\|ftp)://[user[:pass]]@host.domain[:port]/path. |
+| *dynatrace_fixpack_user_name*                   | admin                                            | The username of a Dynatrace user that has the *Manage Fixpacks* permission. |
+| *dynatrace_fixpack_user_password*               | admin                                            | The password of a Dynatrace user that has the *Manage Fixpacks* permission. |
+| *dynatrace_fixpack_role_name*                   | dynatrace.Dynatrace-Fixpack                      | The actual name of this role in an [Ansible Playbook's](http://docs.ansible.com/playbooks.html) ```roles``` directory. |
 
 ## Example Playbook
 
@@ -35,10 +35,12 @@ As defined in ```defaults/main.yml```:
 
 ## Additional Resources
 
-- [Dynatrace Documentation: Server REST Interfaces - Plugin Management](https://community.compuwareapm.com/community/pages/viewpage.action?pageId=182356644)
+- [Blog: How to Automate Enterprise Application Monitoring with Ansible](http://apmblog.dynatrace.com/2015/03/04/how-to-automate-enterprise-application-monitoring-with-ansible/)
+- [Blog: How to Automate Enterprise Application Monitoring with Ansible - Part II](http://apmblog.dynatrace.com/2015/04/23/how-to-automate-enterprise-application-monitoring-with-ansible-part-ii/)
 - [Slide Deck: Automated Deployments](http://slideshare.net/MartinEtmajer/automated-deployments-slide-share)
-- [Slide Deck: Introduction to Automated Deployments with Ansible](http://www.slideshare.net/MartinEtmajer/introduction-to-automated-deployments-with-ansible)
-- [Tutorials: Automated Deployments with Dynatrace and Ansible](https://community.compuwareapm.com/community/display/COE/Tutorials+on+Automated+Deployments#TutorialsonAutomatedDeployments-ansible)
+- [Slide Deck: Automated Deployments (of Dynatrace) with Ansible](http://www.slideshare.net/MartinEtmajer/automated-deployments-with-ansible)
+- [Slide Deck: Testing Ansible Roles with Test Kitchen, Serverspec and RSpec](http://www.slideshare.net/MartinEtmajer/testing-ansible-roles-with-test-kitchen-serverspec-and-rspec-48185017)
+- [Tutorials: Automated Deployments (of Dynatrace) with Ansible](https://community.compuwareapm.com/community/display/COE/Tutorials+on+Automated+Deployments#TutorialsonAutomatedDeployments-ansible)
 
 ## Questions?
 
