@@ -4,7 +4,7 @@
   register: dynatrace_fixpack_file_provided
 
 - name: Check if the Dynatrace Fixpack is provided by URL
-  local_action: get_url url="{{ dynatrace_fixpack_installer_file_url }}" dest="{{ playbook_dir }}/roles/{{ dynatrace_fixpack_role_name }}/files/linux/{{ dynatrace_fixpack_file_name }}" force=yes
+  local_action: get_url url="{{ dynatrace_fixpack_file_url }}" dest="{{ playbook_dir }}/roles/{{ dynatrace_fixpack_role_name }}/files/linux/{{ dynatrace_fixpack_file_name }}" force=yes
   when: not dynatrace_fixpack_file_provided.stat.exists
   register: dynatrace_fixpack_url_provided
   ignore_errors: true
