@@ -1,3 +1,3 @@
 ---
-- include: install-dynatrace-fixpack-linux.yml
+- include: install-dynatrace-update-linux.yml
   when: ansible_system == "Linux"
