@@ -6,7 +6,7 @@ This Ansible role installs and configures a Dynatrace Update of the [Dynatrace A
 
 The role is available via:
 
-- [Ansible Galaxy](https://galaxy.ansible.com/list#/roles/5309)
+- [Ansible Galaxy](https://galaxy.ansible.com/list#/roles/5333)
 - [GitHub](https://github.com/Dynatrace/Dynatrace-Update-Ansible)
 
 ## Description
