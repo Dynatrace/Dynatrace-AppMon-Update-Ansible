@@ -6,4 +6,4 @@ dynatrace_update_file_url: http://localhost/dynatrace/dynatrace-update.dtf
 dynatrace_update_user_name: admin
 dynatrace_update_user_password: admin
 
-dynatrace_update_role_name: dynatrace.Dynatrace-Update
+dynatrace_update_role_name: Dynatrace.Dynatrace-Update

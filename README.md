@@ -23,14 +23,14 @@ As defined in ```defaults/main.yml```:
 | *dynatrace_update_file_url*      | http://localhost/dynatrace/dynatrace-update.dtf | A HTTP, HTTPS or FTP URL to the Dynatrace Update in the form (http\|https\|ftp)://[user[:pass]]@host.domain[:port]/path. |
 | *dynatrace_update_user_name*     | admin                                           | The username of a Dynatrace user that has the *Manage Update* permission. |
 | *dynatrace_update_user_password* | admin                                           | The password of a Dynatrace user that has the *Manage Update* permission. |
-| *dynatrace_update_role_name*     | dynatrace.Dynatrace-Update                      | The actual name of this role in an [Ansible Playbook's](http://docs.ansible.com/playbooks.html) ```roles``` directory. |
+| *dynatrace_update_role_name*     | Dynatrace.Dynatrace-Update                      | The actual name of this role in an [Ansible Playbook's](http://docs.ansible.com/playbooks.html) ```roles``` directory. |
 
 ## Example Playbook
 
 ```
 - hosts: all
   roles:
-    - role: dynatrace.Dynatrace-Update
+    - role: Dynatrace.Dynatrace-Update
 ```
 
 ## Testing
