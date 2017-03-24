@@ -4,15 +4,15 @@
     src: "{{ playbook_dir }}/roles/{{ dynatrace_update_role_name }}/files/{{ dynatrace_update_file_name }}"
     dest: "/tmp/{{ dynatrace_update_file_name }}"
 
-- name: Wait for the Dynatrace Server to become available via port 8020
+- name: Wait for the Dynatrace Server to become available via port 8021
   wait_for:
-    port: 8020
+    port: 8021
     delay: 5
     state: present
   become: yes
 
 - name: Install the Dynatrace Update
-  shell: curl --fail --silent --write-out %{http_code} --user {{ dynatrace_update_user_name }}:{{ dynatrace_update_user_password }} --form "file=@/tmp/{{ dynatrace_update_file_name }}" http://localhost:8020/rest/management/installjobs
+  shell: curl --insecure -v --write-out %{http_code} --user {{ dynatrace_update_user_name }}:{{ dynatrace_update_user_password }} --form "file=@/tmp/{{ dynatrace_update_file_name }}" https://localhost:8021/rest/management/installjobs
   register: dynatrace_update_install
   failed_when: dynatrace_update_install.stdout != '201'
 
@@ -20,3 +20,25 @@
   file:
     path: "/tmp/{{ dynatrace_update_file_name }}"
     state: absent
+
+- name: "Wait 5 minutes for installating fixpack"
+  wait_for:
+    delay: 300
+  when: dynatrace_update_server_restart
+
+- name: Restart Dynatrace Server services
+  service:
+    name: dynaTraceServer
+    state: restarted
+    sleep: 5
+  become: yes
+  when: dynatrace_update_server_restart
+
+- name: "Wait for the Dynatrace Server to become available via port {{ item }}"
+  wait_for:
+    port: "{{ item }}"
+    state: started
+    timeout: 480
+  with_items: [2021, 6699, 8021, 9911]
+  become: yes
+  when: dynatrace_update_server_restart

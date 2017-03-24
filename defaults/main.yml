@@ -5,5 +5,8 @@ dynatrace_update_file_name: dynatrace-update.dtf
 dynatrace_update_file_url: http://localhost/dynatrace/dynatrace-update.dtf
 dynatrace_update_user_name: admin
 dynatrace_update_user_password: admin
+dynatrace_update_server_restart: no  #restart server after update
 
-dynatrace_update_role_name: Dynatrace.Dynatrace-Update
+dynatrace_server_agent_listen_port: 9998
+
+dynatrace_update_role_name: Dynatrace-Update
